@@ -1,5 +1,16 @@
-<button [disabled]="!canAddCar" class="btn btn-primary">Add Car</button>
+<button  class="btn btn-primary" (click)="addCar()">Add Car</button>
 <br>
+<p>{{ addCarStatus }}</p>
 <hr>
 <app-car></app-car>
 <app-car></app-car>
+
+<hr>
+
+<input type="text" class="form-control"  (keyup)="onKeyUp($event)">
+<!-- [iz componeta v shablon] (iz shablona v component) -->
+<br>
+<input type="text" class="form-control" [(ngModel)]="inputText">
+
+<p> {{ inputText }}</p>
+
