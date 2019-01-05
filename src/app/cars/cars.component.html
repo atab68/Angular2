@@ -7,9 +7,12 @@
     <p>Car was added</p>
 </ng-template>
 <hr>
-<app-car></app-car>
-<app-car></app-car>
 
-<hr>
+<app-car *ngFor="let car of cars"></app-car>
 
-
+<br>
+<ul>
+    <li *ngFor="let item of items; let idx = index">
+        <b>{{idx + 1}}</b> - <i>{{item.name}}</i>
+    </li>
+</ul>
